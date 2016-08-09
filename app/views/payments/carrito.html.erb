@@ -1,0 +1,16 @@
+<h1> <i class= "fa fa-shopping-cart"></i> Mi Carrito de Compras</h1>
+<ul class="list-group">
+    <% @payments.each do |payment| %>}
+        <li>
+            <div class="row">
+                <div class="col-md-8">
+                    <%= payment.post.titulo %>
+                </div>
+                <div class="col-md-3 text-right">
+                    <%= "#{payment.post.costo}USD" unless payment.cost.nil? %>
+                </div>
+            </div>
+        </li>
+    <%end%>
+    </li>
+</ul>
